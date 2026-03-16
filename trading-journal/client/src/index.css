@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TRADING JOURNAL — Finance Dashboard Theme
+   Dark slate surfaces, blue accent, high contrast data */
+
+/* LIGHT MODE */
+:root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .08);
+  --background: 215 25% 97%;
+  --foreground: 215 30% 12%;
+  --border: 215 15% 88%;
+  --card: 0 0% 100%;
+  --card-foreground: 215 30% 12%;
+  --card-border: 215 15% 91%;
+  --sidebar: 215 20% 95%;
+  --sidebar-foreground: 215 30% 12%;
+  --sidebar-border: 215 15% 89%;
+  --sidebar-primary: 221 83% 53%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 215 15% 91%;
+  --sidebar-accent-foreground: 215 30% 12%;
+  --sidebar-ring: 221 83% 53%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 30% 12%;
+  --popover-border: 215 15% 88%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 0 0% 100%;
+  --primary-hover: 221 83% 46%;
+  --secondary: 215 15% 93%;
+  --secondary-foreground: 215 30% 20%;
+  --muted: 215 15% 93%;
+  --muted-foreground: 215 10% 46%;
+  --accent: 215 15% 91%;
+  --accent-foreground: 215 30% 15%;
+  --destructive: 4 86% 58%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 142 71% 45%;
+  --success-foreground: 0 0% 100%;
+  --ring: 221 83% 53%;
+  --radius: 0.5rem;
+  --input: 215 15% 88%;
+}
+
+/* DARK MODE */
+.dark {
+  --button-outline: rgba(255,255,255, .08);
+  --badge-outline: rgba(255,255,255, .06);
+  --opaque-button-border-intensity: 8;
+  --elevate-1: rgba(255,255,255, .03);
+  --elevate-2: rgba(255,255,255, .06);
+  --background: 222 20% 9%;
+  --foreground: 210 15% 88%;
+  --border: 220 13% 18%;
+  --card: 222 18% 11%;
+  --card-foreground: 210 15% 88%;
+  --card-border: 220 13% 20%;
+  --sidebar: 222 20% 8%;
+  --sidebar-foreground: 210 15% 80%;
+  --sidebar-border: 220 13% 17%;
+  --sidebar-primary: 221 80% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 220 13% 16%;
+  --sidebar-accent-foreground: 210 15% 80%;
+  --sidebar-ring: 221 80% 60%;
+  --popover: 222 18% 12%;
+  --popover-foreground: 210 15% 88%;
+  --popover-border: 220 13% 20%;
+  --primary: 221 80% 60%;
+  --primary-foreground: 0 0% 100%;
+  --primary-hover: 221 80% 52%;
+  --secondary: 220 13% 18%;
+  --secondary-foreground: 210 15% 75%;
+  --muted: 220 13% 16%;
+  --muted-foreground: 215 10% 52%;
+  --accent: 220 13% 18%;
+  --accent-foreground: 210 15% 85%;
+  --destructive: 4 75% 55%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 142 60% 45%;
+  --success-foreground: 0 0% 100%;
+  --ring: 221 80% 60%;
+  --input: 220 13% 22%;
+}
+
+/* ─── Base styles ─── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Inter', 'DM Sans', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Tabular nums for financial data */
+.tabular-nums {
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: -0.01em;
+}
+
+/* ─── Recharts theming ─── */
+.recharts-text { fill: hsl(var(--muted-foreground)); }
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line { stroke: hsl(var(--border)); }
